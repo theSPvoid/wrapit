@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Sign-Up - WRAPiT</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #f4f4f9;
+            font-family: Arial, sans-serif;
+        }
+
+        .signup-container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        input[type="text"], input[type="email"], input[type="number"], input[type="password"], select, textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        p {
+            text-align: center;
+            color: #555;
+            margin-top: 20px;
+        }
+
+        p a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        p a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="signup-container">
+        <h1>Business Sign-Up</h1>
+        <form action="business-dashboard.html" method="POST">
+
+            <!-- Full Name -->
+            <label for="full-name">Full Name</label>
+            <input type="text" id="full-name" name="full-name" required>
+
+            <!-- Address and Pincode -->
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="pincode">Pincode</label>
+            <input type="number" id="pincode" name="pincode" required>
+
+            <!-- Business Information -->
+            <label for="business-name">Business Name</label>
+            <input type="text" id="business-name" name="business-name" required>
+
+            <label for="gst-number">GST Number</label>
+            <input type="text" id="gst-number" name="gst-number" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone-number">Phone Number</label>
+            <input type="number" id="phone-number" name="phone-number" required>
+
+            <!-- Business Type and Industry -->
+            <label for="business-type">Business Type</label>
+            <select id="business-type" name="business-type" required>
+                <option value="Manufacturer">Manufacturer</option>
+                <option value="Retailer">Retailer</option>
+                <option value="Ecommerce">Ecommerce</option>
+                <option value="Distributor">Distributor</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="industry">Industry</label>
+            <select id="industry" name="industry" required>
+                <option value="Fashion">Fashion</option>
+                <option value="Food & Beverage">Food & Beverage</option>
+                <option value="Health & Beauty">Health & Beauty</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <!-- Billing Options -->
+            <label for="billing-option">Billing Option</label>
+            <select id="billing-option" name="billing-option" required>
+                <option value="Monthly">Monthly</option>
+                <option value="Quarterly">Quarterly</option>
+                <option value="Annually">Annually</option>
+            </select>
+
+            <!-- Packaging Requirements -->
+            <label for="packaging-type">Types of Packaging Required</label>
+            <select id="packaging-type" name="packaging-type" required>
+                <option value="Boxes">Boxes</option>
+                <option value="Bags">Bags</option>
+                <option value="Bottles">Bottles</option>
+                <option value="Wrappers">Wrappers</option>
+                <option value="Custom">Custom</option>
+            </select>
+
+            <!-- Preferred Materials -->
+            <label>Preferred Materials</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="materials" value="Paper"> Paper</label>
+                <label><input type="checkbox" name="materials" value="Plastic"> Plastic</label>
+                <label><input type="checkbox" name="materials" value="Glass"> Glass</label>
+                <label><input type="checkbox" name="materials" value="Biodegradable"> Biodegradable</label>
+                <label><input type="checkbox" name="materials" value="Recycled"> Recycled</label>
+            </div>
+
+            <!-- Account Information -->
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+
+            <!-- Terms Agreement -->
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">I agree to the Terms and Conditions</label><br><br>
+            
+            <!-- Submit Button -->
+            <button type="submit">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="business-login.html">Log in here</a>.</p>
+    </div>
+</body>
+</html>

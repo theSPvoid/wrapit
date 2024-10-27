@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supplier Profile - WRAPiT</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #f4f4f9;
+            font-family: Arial, sans-serif;
+        }
+
+        .profile-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .profile-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #eee;
+        }
+
+        h1 {
+            color: #4CAF50;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 22px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #555;
+            margin-bottom: 12px;
+        }
+
+        .products, .certifications, .reviews {
+            margin: 20px 0;
+        }
+
+        .product-card, .certification-card, .review-card {
+            background-color: #f9f9f9;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-card h3, .certification-card h3, .review-card h3 {
+            font-size: 18px;
+            color: #4CAF50;
+            margin-bottom: 8px;
+        }
+
+        .contract-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .contract-btn {
+            padding: 15px 30px;
+            font-size: 20px;
+            font-weight: bold;
+            background-color: #4CAF50;
+            color: #ffffff;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .contract-btn:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-container">
+        <!-- Supplier Overview -->
+        <div class="profile-header">
+            <h1>Supplier: EcoPack Solutions</h1>
+            <p>Location: Maharashtra | 10+ Years in Business</p>
+        </div>
+
+        <div class="overview">
+            <h2>About the Supplier</h2>
+            <p>EcoPack Solutions specializes in providing sustainable and eco-friendly packaging materials. With over a decade of experience, they have been pioneers in the industry, ensuring quality and compliance with global sustainability standards.</p>
+        </div>
+
+        <!-- Products Offered -->
+        <div class="products">
+            <h2>Products Offered</h2>
+            <div class="product-card">
+                <h3>Recycled Paper Bags</h3>
+                <p>Material: 100% Recycled Paper</p>
+                <p>Price Range: ₹20 - ₹40 per unit</p>
+                <p>Status: Available</p>
+            </div>
+            <div class="product-card">
+                <h3>Compostable Food Containers</h3>
+                <p>Material: Biodegradable Plastic</p>
+                <p>Price Range: ₹50 - ₹100 per unit</p>
+                <p>Status: Available</p>
+            </div>
+            <div class="product-card">
+                <h3>Biodegradable Wrapping Sheets</h3>
+                <p>Material: Compostable Materials</p>
+                <p>Price Range: ₹15 - ₹30 per unit</p>
+                <p>Status: Limited Stock</p>
+            </div>
+        </div>
+
+        <!-- Sustainability Certifications -->
+        <div class="certifications">
+            <h2>Sustainability Certifications</h2>
+            <div class="certification-card">
+                <h3>ISO Certified</h3>
+                <p>International standards certification for environmental management systems.</p>
+            </div>
+            <div class="certification-card">
+                <h3>FSC Certified</h3>
+                <p>Ensures materials are responsibly sourced from well-managed forests.</p>
+            </div>
+            <div class="certification-card">
+                <h3>Organic Certified</h3>
+                <p>Compliant with organic production and handling standards.</p>
+            </div>
+        </div>
+
+        <!-- Customer Reviews -->
+        <div class="reviews">
+            <h2>Customer Reviews</h2>
+            <div class="review-card">
+                <h3>Retailer X</h3>
+                <p>Rating: ★★★★☆</p>
+                <p>Review: "EcoPack Solutions has been a reliable partner for us. Their products are top-notch and they have always met our sustainability goals."</p>
+            </div>
+            <div class="review-card">
+                <h3>FoodChain Y</h3>
+                <p>Rating: ★★★★☆</p>
+                <p>Review: "Their biodegradable containers have been a game-changer for us. Fast delivery and quality products!"</p>
+            </div>
+        </div>
+
+        <!-- Initiate Contract Button -->
+        <div class="contract-container">
+            <a href="#" class="contract-btn">Initiate Contract</a>
+        </div>
+    </div>
+</body>
+</html>

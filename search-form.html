@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search for Suppliers - WRAPiT</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #f4f4f9;
+            font-family: Arial, sans-serif;
+        }
+
+        .form-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        select, input[type="text"], textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .checkbox-group, .dropdown-group {
+            margin-bottom: 20px;
+        }
+
+        .checkbox-group label, .dropdown-group label {
+            display: inline-block;
+            margin-right: 15px;
+            color: #333;
+        }
+
+        .submit-btn {
+            display: block;
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Search for Suppliers</h1>
+        <form action="results.html" method="POST">
+            <!-- Type of Packaging -->
+            <label for="packaging-type">Type of Packaging</label>
+            <select id="packaging-type" name="packaging-type" required>
+                <option value="">Select Packaging Type</option>
+                <option value="Boxes">Boxes</option>
+                <option value="Bags">Bags</option>
+                <option value="Bottles">Bottles</option>
+                <option value="Wrappers">Wrappers</option>
+                <option value="Custom">Custom</option>
+            </select>
+
+            <!-- Preferred Materials -->
+            <label>Preferred Materials</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="materials" value="Paper"> Paper</label>
+                <label><input type="checkbox" name="materials" value="Plastic"> Plastic</label>
+                <label><input type="checkbox" name="materials" value="Glass"> Glass</label>
+                <label><input type="checkbox" name="materials" value="Biodegradable"> Biodegradable</label>
+                <label><input type="checkbox" name="materials" value="Recycled"> Recycled</label>
+            </div>
+
+            <!-- Budget Range -->
+            <label for="budget-range">Budget Range (INR)</label>
+            <select id="budget-range" name="budget-range" required>
+                <option value="">Select Budget Range</option>
+                <option value="0-50k">0 - 50,000</option>
+                <option value="50k-1L">50,000 - 1,00,000</option>
+                <option value="1L-5L">1,00,000 - 5,00,000</option>
+                <option value="5L+">5,00,000+</option>
+            </select>
+
+            <!-- Order Quantity -->
+            <label for="order-quantity">Order Quantity (in units)</label>
+            <input type="text" id="order-quantity" name="order-quantity" placeholder="Enter quantity" required>
+
+            <!-- Delivery Time Requirement -->
+            <label for="delivery-time">Delivery Time Requirement</label>
+            <select id="delivery-time" name="delivery-time" required>
+                <option value="">Select Delivery Time</option>
+                <option value="1 week">1 Week</option>
+                <option value="2 weeks">2 Weeks</option>
+                <option value="1 month">1 Month</option>
+                <option value="Flexible">Flexible</option>
+            </select>
+
+            <!-- Sustainability Certifications Required -->
+            <label>Sustainability Certifications Required</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="certifications" value="ISO"> ISO Certified</label>
+                <label><input type="checkbox" name="certifications" value="FSC"> FSC Certified</label>
+                <label><input type="checkbox" name="certifications" value="Organic"> Organic Certified</label>
+                <label><input type="checkbox" name="certifications" value="Fair Trade"> Fair Trade</label>
+            </div>
+
+            <!-- Supplier Location -->
+            <label for="supplier-location">Supplier Location</label>
+            <select id="supplier-location" name="supplier-location" required>
+                <option value="">Select Location</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Tamil Nadu">Tamil Nadu</option>
+                <option value="Delhi">Delhi</option>
+                <option value="West Bengal">West Bengal</option>
+            </select>
+
+            <!-- Additional Requirements -->
+            <label for="additional-requirements">Additional Requirements</label>
+            <textarea id="additional-requirements" name="additional-requirements" rows="3" placeholder="Any specific needs or preferences..."></textarea>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">Find Best Suppliers</button>
+        </form>
+    </div>
+</body>
+</html>

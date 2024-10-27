@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supplier Dashboard - WRAPiT</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #f4f4f9;
+            font-family: Arial, sans-serif;
+        }
+
+        .dashboard-container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #eee;
+        }
+
+        h1 {
+            font-size: 32px;
+            color: #4CAF50;
+        }
+
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .metric-card {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .metric-card h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .metric-card p {
+            font-size: 24px;
+            font-weight: bold;
+            color: #4CAF50;
+        }
+
+        .orders-received {
+            margin: 20px 0;
+        }
+
+        .order-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+
+        .order-table th, .order-table td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        .order-table th {
+            background-color: #f4f4f4;
+        }
+
+        .product-listings {
+            margin: 30px 0;
+        }
+
+        .product-listings .product-card {
+            background-color: #f9f9f9;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-listings .product-card h3 {
+            font-size: 20px;
+            color: #4CAF50;
+        }
+
+        .sustainability-performance {
+            margin: 30px 0;
+        }
+
+        .progress-container {
+            margin: 20px 0;
+        }
+
+        .progress-bar {
+            background-color: #eee;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .progress {
+            height: 25px;
+            background-color: #4CAF50;
+            text-align: center;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .add-product-container {
+            display: flex;
+            justify-content: center;
+            margin: 40px 0;
+        }
+
+        .add-product-btn {
+            padding: 20px 40px;
+            font-size: 22px;
+            font-weight: bold;
+            background-color: #4CAF50;
+            color: #ffffff;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .add-product-btn:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Dashboard Header -->
+        <div class="dashboard-header">
+            <h1>Welcome, [Supplier Name]</h1>
+            <p>Date: <strong id="currentDate"></strong></p>
+        </div>
+
+        <!-- Key Metrics Section -->
+        <div class="metrics">
+            <div class="metric-card">
+                <h3>Total Orders Received</h3>
+                <p>45</p>
+            </div>
+            <div class="metric-card">
+                <h3>Total Revenue (INR)</h3>
+                <p>₹5,60,000</p>
+            </div>
+            <div class="metric-card">
+                <h3>Top Products</h3>
+                <p>Biodegradable Boxes</p>
+            </div>
+            <div class="metric-card">
+                <h3>Active Clients</h3>
+                <p>12</p>
+            </div>
+        </div>
+
+        <!-- Orders Received Tracker -->
+        <div class="orders-received">
+            <h2>Recent Orders Received</h2>
+            <table class="order-table">
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Client Name</th>
+                        <th>Order Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#2051</td>
+                        <td>Sustainable Retail Inc.</td>
+                        <td>23-Oct-2024</td>
+                        <td>Processing</td>
+                    </tr>
+                    <tr>
+                        <td>#2049</td>
+                        <td>EcoFriendly Grocers</td>
+                        <td>20-Oct-2024</td>
+                        <td>Shipped</td>
+                    </tr>
+                    <tr>
+                        <td>#2045</td>
+                        <td>Green Market</td>
+                        <td>18-Oct-2024</td>
+                        <td>Delivered</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Product Listings -->
+        <div class="product-listings">
+            <h2>Your Product Listings</h2>
+            <div class="product-card">
+                <h3>Product: Recycled Paper Bags</h3>
+                <p>Material: 100% Recycled Paper</p>
+                <p>Price Range: ₹25 - ₹50 per unit</p>
+                <p>Status: Available</p>
+            </div>
+            <div class="product-card">
+                <h3>Product: Compostable Food Containers</h3>
+                <p>Material: Biodegradable Plastic</p>
+                <p>Price Range: ₹100 - ₹150 per unit</p>
+                <p>Status: Out of Stock</p>
+            </div>
+        </div>
+
+        <!-- Sustainability Performance Tracker -->
+        <div class="sustainability-performance">
+            <h2>Sustainability Performance</h2>
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress" style="width: 80%;">80% Sustainability Certifications Achieved</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add New Product Button -->
+        <div class="add-product-container">
+            <a href="add-new-product.html" class="add-product-btn">Add New Product</a>
+        </div>
+    </div>
+
+    <!-- JavaScript to Display Current Date -->
+    <script>
+        // Display the current date
+        document.getElementById('currentDate').innerText = new Date().toLocaleDateString();
+    </script>
+</body>
+</html>

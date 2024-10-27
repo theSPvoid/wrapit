@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WRAPiT - AI-Driven Packaging Marketplace</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to CSS file -->
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header with Navigation and Dropdown */
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #4CAF50;
+        }
+
+        /* Navigation Styles */
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        nav ul li {
+            position: relative;
+        }
+
+        nav ul li a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li:hover > ul {
+            display: block;
+        }
+
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            background-color: #ffffff;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            min-width: 150px;
+            z-index: 1000;
+        }
+
+        nav ul li ul li {
+            padding: 10px;
+        }
+
+        nav ul li ul li a {
+            color: #333;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        nav ul li ul li a:hover {
+            background-color: #f4f4f9;
+        }
+
+        /* Auth Buttons (Log In) */
+        .auth-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .auth-buttons a {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .auth-buttons a:hover {
+            background-color: #45a049;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-image: linear-gradient(to bottom right, #4CAF50, #6FBF73);
+            color: #ffffff;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 48px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin: 20px 0;
+        }
+
+        .tagline {
+            font-size: 24px;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #ffffff;
+            color: #4CAF50;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .hero-btn:hover {
+            background-color: #ddd;
+        }
+
+        /* Image Section Above How It Works */
+        .image-section {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+
+        .image-section img {
+            max-width: 100%;
+            height: auto;
+            margin: 10px;
+            border-radius: 10px;
+        }
+
+        /* How It Works Section */
+        .how-it-works {
+            padding: 50px 20px;
+            background-color: #ffffff;
+            text-align: center;
+        }
+
+        .how-it-works h2 {
+            margin-bottom: 20px;
+        }
+
+        .steps {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .step {
+            flex-basis: 30%;
+            background-color: #f4f4f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .step h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer-nav {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .footer-nav li a {
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1 class="logo">WRAPiT</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Industry</a>
+                        <ul>
+                            <li><a href="#">Ecommerce</a></li>
+                            <li><a href="#">Fashion</a></li>
+                            <li><a href="#">F&B Restaurants</a></li>
+                            <li><a href="#">Beauty</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Company</a>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Founders</a></li>
+                            <li><a href="#">Testimonials</a></li>
+                            <li><a href="#">FAQs</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Impact</a>
+                        <ul>
+                            <li><a href="#">Environment Impact</a></li>
+                            <li><a href="#">Testimonials</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Contact Us</a>
+                        <ul>
+                            <li><a href="#">Email ID</a></li>
+                            <li><a href="#">Office</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="business-login.html">Log In (Business)</a>
+                <a href="supplier-login.html">Log In (Supplier)</a>
+            </div>
+        </div>
+    </header>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container hero-content">
+        <div class="text-group">
+            <p class="tagline">Revolutionizing Packaging with AI-Driven Sustainability</p>
+            <h2>AI-Driven Sustainable Packaging Solutions</h2>
+            <p class="subtext">Connect your business with eco-friendly packaging suppliers in minutes.</p>
+            <div class="button-group">
+                <a href="business-signup.html" class="btn hero-btn">Get Started (Business)</a>
+                <a href="supplier-signup.html" class="btn hero-btn">Get Started (Supplier)</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Image Section (Optional) -->
+    <section class="image-section">
+        <div class="container">
+            <h2>Explore Our Packaging Solutions</h2>
+            <img src="C:\Users\Sarthak\OneDrive - XIM University, Bhubaneswar\XIMB\Case Comps\Accenture\Website\Image 1.jpg" alt="Packaging Example 1">
+            <img src="C:\Users\Sarthak\OneDrive - XIM University, Bhubaneswar\XIMB\Case Comps\Accenture\Website\Image 2.jpg" alt="Packaging Example 2">
+            <img src="C:\Users\Sarthak\OneDrive - XIM University, Bhubaneswar\XIMB\Case Comps\Accenture\Website\Image 3.jpg" alt="Packaging Example 3">
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2>How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <h3>Step 1</h3>
+                    <p>Input your packaging needs.</p>
+                </div>
+                <div class="step">
+                    <h3>Step 2</h3>
+                    <p>Get matched with sustainable suppliers.</p>
+                </div>
+                <div class="step">
+                    <h3>Step 3</h3>
+                    <p>Contact suppliers and finalize packaging.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 WRAPiT. All Rights Reserved.</p>
+            <ul class="footer-nav">
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+</html>
